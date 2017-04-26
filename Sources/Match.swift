@@ -15,11 +15,11 @@ private func does(string: String?, matchRegex pattern: String) -> Bool {
 	return matchRange.location != NSNotFound
 }
 
-struct Match {
-	let type: MatchType
-	let test: String
+public struct Match {
+	public let type: MatchType
+	public let test: String
 
-	func matches(_ string: String) -> Bool {
+	public func matches(_ string: String) -> Bool {
 		switch(type) {
 		case .contains:
 			return string.contains(test)
@@ -58,7 +58,7 @@ struct Match {
 }
 
 extension Match: Equatable {}
-func ==(left: Match, right: Match) -> Bool {
+public func ==(left: Match, right: Match) -> Bool {
 	return left.type == right.type
 		&& left.test == right.test
 }

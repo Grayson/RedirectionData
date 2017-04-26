@@ -7,8 +7,8 @@
 //
 
 public struct Rule {
-	let browserIdentifier: BundleIdentifier
-	let match: Match
+	public let browserIdentifier: BundleIdentifier
+	public let match: Match
 }
 
 extension Rule: Equatable {}
