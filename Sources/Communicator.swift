@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc protocol Communicator {
+@objc public protocol Communicator {
 	func ping(_ pong: () -> ())
 	func handle(message: InterappMessage)
 	func update(rules: [EncodableRule])
